@@ -31,9 +31,9 @@ router.route("/").post(async (req, res) => {
     //   model: "gpt-3.5-turbo",
     //   prompt:prompt
     model : 'gpt-3.5-turbo',
-    messages : [{"role":"system", "content" : "Act as code generator, you must write the code in markdown and use comment to explain it"}, {"role": "user", "content": prompt}]
+    messages : [{role : "system", content : "Act as code generator, you will provide the code explained in markdow."}, {role: "user", content : prompt}]
     });
-
+    console.log(response.data.choices[0].message)
     res.status(200).json({ data: response.data.choices[0].message });
   } catch (error) {
     res.status(500).send(error.message);

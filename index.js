@@ -17,7 +17,7 @@ const imageRouter = require('./routes/image');
 const musicRouter = require('./routes/music');
 const videoRouter = require('./routes/video');
 
-app.use('/api/conv', convRouter);
+app.use('/api/conversation', convRouter);
 app.use('/api/code', codeRouter);
 app.use('/api/image', imageRouter);
 app.use('/api/music', musicRouter);
