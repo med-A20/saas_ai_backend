@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const bodyparser = require("body-parser");
+
 require("dotenv").config();
 
 const { Configuration, OpenAIApi } = require("openai");
